@@ -16,10 +16,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Shoppingcart database settings
+    | cart database settings
     |--------------------------------------------------------------------------
     |
-    | Here you can set the connection that the shoppingcart should use when
+    | Here you can set the connection that the cart should use when
     | storing and restoring a cart.
     |
     */
@@ -28,7 +28,7 @@ return [
 
         'connection' => null,
 
-        'table' => 'shoppingcart',
+        'table' => 'cart',
 
     ],
 

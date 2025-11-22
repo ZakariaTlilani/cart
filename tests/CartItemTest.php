@@ -1,10 +1,10 @@
 <?php
 
-namespace Gloudemans\Tests\Shoppingcart;
+namespace ZakariaTlilani\Tests\cart;
 
 use Orchestra\Testbench\TestCase;
-use Gloudemans\Shoppingcart\CartItem;
-use Gloudemans\Shoppingcart\ShoppingcartServiceProvider;
+use ZakariaTlilani\cart\CartItem;
+use ZakariaTlilani\cart\cartServiceProvider;
 
 class CartItemTest extends TestCase
 {
@@ -16,7 +16,7 @@ class CartItemTest extends TestCase
      */
     protected function getPackageProviders($app)
     {
-        return [ShoppingcartServiceProvider::class];
+        return [cartServiceProvider::class];
     }
 
     /** @test */

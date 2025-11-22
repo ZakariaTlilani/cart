@@ -1,12 +1,12 @@
 <?php
 
-namespace Gloudemans\Shoppingcart;
+namespace ZakariaTlilani\cart;
 
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Session\SessionManager;
 use Illuminate\Support\ServiceProvider;
 
-class ShoppingcartServiceProvider extends ServiceProvider
+class cartServiceProvider extends ServiceProvider
 {
 
     /**
@@ -16,7 +16,7 @@ class ShoppingcartServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('cart', 'Gloudemans\Shoppingcart\Cart');
+        $this->app->bind('cart', 'ZakariaTlilani\cart\Cart');
 
         $config = __DIR__ . '/../config/cart.php';
         $this->mergeConfigFrom($config, 'cart');
@@ -29,12 +29,12 @@ class ShoppingcartServiceProvider extends ServiceProvider
             }
         });
 
-        if ( ! class_exists('CreateShoppingcartTable')) {
+        if (! class_exists('CreatecartTable')) {
             // Publish the migration
             $timestamp = date('Y_m_d_His', time());
 
             $this->publishes([
-                __DIR__.'/../database/migrations/0000_00_00_000000_create_shoppingcart_table.php' => database_path('migrations/'.$timestamp.'_create_shoppingcart_table.php'),
+                __DIR__ . '/../database/migrations/0000_00_00_000000_create_cart_table.php' => database_path('migrations/' . $timestamp . '_create_cart_table.php'),
             ], 'migrations');
         }
     }
