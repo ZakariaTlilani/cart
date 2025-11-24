@@ -4,7 +4,7 @@ namespace zakariatlilani\Tests\cart;
 
 use Orchestra\Testbench\TestCase;
 use zakariatlilani\cart\CartItem;
-use zakariatlilani\cart\cartServiceProvider;
+use zakariatlilani\cart\CartServiceProvider;
 
 class CartItemTest extends TestCase
 {
@@ -16,7 +16,7 @@ class CartItemTest extends TestCase
      */
     protected function getPackageProviders($app)
     {
-        return [cartServiceProvider::class];
+        return [CartServiceProvider::class];
     }
 
     /** @test */

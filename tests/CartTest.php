@@ -12,7 +12,7 @@ use zakariatlilani\cart\CartItem;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Session\SessionManager;
 use Illuminate\Contracts\Auth\Authenticatable;
-use zakariatlilani\cart\cartServiceProvider;
+use zakariatlilani\cart\CartServiceProvider;
 use zakariatlilani\Tests\cart\Fixtures\ProductModel;
 use zakariatlilani\Tests\cart\Fixtures\BuyableProduct;
 
@@ -28,7 +28,7 @@ class CartTest extends TestCase
      */
     protected function getPackageProviders($app)
     {
-        return [cartServiceProvider::class];
+        return [CartServiceProvider::class];
     }
 
     /**

@@ -17,7 +17,7 @@ Should you still be on version 5.4 of Laravel, the final steps for you are to ad
 Add a new line to the `providers` array:
 
 ```php
-zakariatlilani\cart\cartServiceProvider::class
+zakariatlilani\cart\CartServiceProvider::class
 ```
 
 And optionally add a new line to the `aliases` array:
@@ -396,7 +396,7 @@ By default the package will use the default database connection and use a table 
 If you want to change these options, you'll have to publish the `config` file.
 
 ```bash
-    php artisan vendor:publish --provider="zakariatlilani\cart\cartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="zakariatlilani\cart\CartServiceProvider" --tag="config"
 ```
 
 This will give you a `cart.php` config file in which you can make the changes.
@@ -404,7 +404,7 @@ This will give you a `cart.php` config file in which you can make the changes.
 To make your life easy, the package also includes a ready to use `migration` which you can publish by running:
 
 ```bash
-    php artisan vendor:publish --provider="zakariatlilani\cart\cartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="zakariatlilani\cart\CartServiceProvider" --tag="migrations"
 ```
 
 This will place a `cart` table's migration file into `database/migrations` directory. Now all you have to do is run `php artisan migrate` to migrate your database.
