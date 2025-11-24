@@ -6,7 +6,7 @@ use Illuminate\Auth\Events\Logout;
 use Illuminate\Session\SessionManager;
 use Illuminate\Support\ServiceProvider;
 
-class cartServiceProvider extends ServiceProvider
+class CartServiceProvider extends ServiceProvider
 {
 
     /**
