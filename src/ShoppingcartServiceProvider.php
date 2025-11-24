@@ -1,6 +1,6 @@
 <?php
 
-namespace ZakariaTlilani\cart;
+namespace zakariatlilani\cart;
 
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Session\SessionManager;
@@ -16,7 +16,7 @@ class cartServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('cart', 'ZakariaTlilani\cart\Cart');
+        $this->app->bind('cart', 'zakariatlilani\cart\Cart');
 
         $config = __DIR__ . '/../config/cart.php';
         $this->mergeConfigFrom($config, 'cart');

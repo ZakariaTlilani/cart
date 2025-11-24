@@ -1,10 +1,10 @@
 <?php
 
-namespace ZakariaTlilani\Tests\cart;
+namespace zakariatlilani\Tests\cart;
 
 use Orchestra\Testbench\TestCase;
-use ZakariaTlilani\cart\CartItem;
-use ZakariaTlilani\cart\cartServiceProvider;
+use zakariatlilani\cart\CartItem;
+use zakariatlilani\cart\cartServiceProvider;
 
 class CartItemTest extends TestCase
 {

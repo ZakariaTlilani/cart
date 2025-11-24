@@ -1,6 +1,6 @@
 <?php
 
-namespace ZakariaTlilani\cart\Contracts;
+namespace zakariatlilani\cart\Contracts;
 
 interface Buyable
 {

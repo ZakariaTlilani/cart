@@ -1,20 +1,20 @@
 <?php
 
-namespace ZakariaTlilani\Tests\cart;
+namespace zakariatlilani\Tests\cart;
 
 use Mockery;
 use PHPUnit\Framework\Assert;
-use ZakariaTlilani\cart\Cart;
+use zakariatlilani\cart\Cart;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Collection;
-use ZakariaTlilani\cart\CartItem;
+use zakariatlilani\cart\CartItem;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Session\SessionManager;
 use Illuminate\Contracts\Auth\Authenticatable;
-use ZakariaTlilani\cart\cartServiceProvider;
-use ZakariaTlilani\Tests\cart\Fixtures\ProductModel;
-use ZakariaTlilani\Tests\cart\Fixtures\BuyableProduct;
+use zakariatlilani\cart\cartServiceProvider;
+use zakariatlilani\Tests\cart\Fixtures\ProductModel;
+use zakariatlilani\Tests\cart\Fixtures\BuyableProduct;
 
 class CartTest extends TestCase
 {
@@ -340,7 +340,7 @@ class CartTest extends TestCase
 
     /**
      * @test
-     * @expectedException \ZakariaTlilani\cart\Exceptions\InvalidRowIDException
+     * @expectedException \zakariatlilani\cart\Exceptions\InvalidRowIDException
      */
     public function it_will_throw_an_exception_if_a_rowid_was_not_found()
     {
@@ -622,7 +622,7 @@ class CartTest extends TestCase
 
     /**
      * @test
-     * @expectedException \ZakariaTlilani\cart\Exceptions\UnknownModelException
+     * @expectedException \zakariatlilani\cart\Exceptions\UnknownModelException
      * @expectedExceptionMessage The supplied model SomeModel does not exist.
      */
     public function it_will_throw_an_exception_when_a_non_existing_model_is_being_associated()
@@ -917,7 +917,7 @@ class CartTest extends TestCase
     /**
      * Get an instance of the cart.
      *
-     * @return \ZakariaTlilani\cart\Cart
+     * @return \zakariatlilani\cart\Cart
      */
     private function getCart()
     {

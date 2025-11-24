@@ -1,5 +1,5 @@
 {
-  "name": "ZakariaTlilani/cart",
+  "name": "zakariatlilani/cart",
   "description": "Laravel Shopping cart",
   "keywords": [
     "laravel",
@@ -8,8 +8,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Rob ZakariaTlilani",
-      "email": "info@robZakariaTlilani.nl"
+      "name": "Rob zakariatlilani",
+      "email": "info@robzakariatlilani.nl"
     }
   ],
   "require": {
@@ -24,25 +24,25 @@
   },
   "autoload": {
     "psr-4": {
-      "ZakariaTlilani\\cart\\": "src/"
+      "zakariatlilani\\cart\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ZakariaTlilani\\Tests\\cart\\": "tests/"
+      "zakariatlilani\\Tests\\cart\\": "tests/"
     }
   },
   "suggest": {
-    "ZakariaTlilani/notify": "Simple flash notifications for Laravel"
+    "zakariatlilani/notify": "Simple flash notifications for Laravel"
   },
   "minimum-stability": "stable",
   "extra": {
     "laravel": {
       "providers": [
-        "ZakariaTlilani\\cart\\cartServiceProvider"
+        "zakariatlilani\\cart\\cartServiceProvider"
       ],
       "aliases": {
-        "Cart": "ZakariaTlilani\\cart\\Facades\\Cart"
+        "Cart": "zakariatlilani\\cart\\Facades\\Cart"
       }
     }
   }

@@ -7,7 +7,7 @@ Install the package through [Composer](http://getcomposer.org/).
 Run the Composer require command from the Terminal:
 
 ```bash
-composer require ZakariaTlilani/cart
+composer require zakariatlilani/cart
 ```
 
 If you're using Laravel 5.5 or above, this is all there is to do.
@@ -17,13 +17,13 @@ Should you still be on version 5.4 of Laravel, the final steps for you are to ad
 Add a new line to the `providers` array:
 
 ```php
-ZakariaTlilani\cart\cartServiceProvider::class
+zakariatlilani\cart\cartServiceProvider::class
 ```
 
 And optionally add a new line to the `aliases` array:
 
 ```php
-'Cart' => ZakariaTlilani\cart\Facades\Cart::class,
+'Cart' => zakariatlilani\cart\Facades\Cart::class,
 ```
 
 Now you're ready to start using the cart in your application.
@@ -83,7 +83,7 @@ This way you can just pass the `add()` method a model and the quantity and it wi
 The path to the `Buyable` interface is:
 
 ```php
-ZakariaTlilani\cart\Contracts\Buyable;
+zakariatlilani\cart\Contracts\Buyable;
 ```
 
 **As an added bonus it will automatically associate the model with the CartItem**
@@ -365,7 +365,7 @@ Example:
 
 namespace App\Models;
 
-use ZakariaTlilani\cart\Contracts\Buyable;
+use zakariatlilani\cart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product exends Model implements Buyable {
@@ -396,7 +396,7 @@ By default the package will use the default database connection and use a table 
 If you want to change these options, you'll have to publish the `config` file.
 
 ```bash
-    php artisan vendor:publish --provider="ZakariaTlilani\cart\cartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="zakariatlilani\cart\cartServiceProvider" --tag="config"
 ```
 
 This will give you a `cart.php` config file in which you can make the changes.
@@ -404,7 +404,7 @@ This will give you a `cart.php` config file in which you can make the changes.
 To make your life easy, the package also includes a ready to use `migration` which you can publish by running:
 
 ```bash
-    php artisan vendor:publish --provider="ZakariaTlilani\cart\cartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="zakariatlilani\cart\cartServiceProvider" --tag="migrations"
 ```
 
 This will place a `cart` table's migration file into `database/migrations` directory. Now all you have to do is run `php artisan migrate` to migrate your database.

@@ -1,6 +1,6 @@
 <?php
 
-namespace ZakariaTlilani\cart\Facades;
+namespace zakariatlilani\cart\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

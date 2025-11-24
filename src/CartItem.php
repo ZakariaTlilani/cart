@@ -1,9 +1,9 @@
 <?php
 
-namespace ZakariaTlilani\cart;
+namespace zakariatlilani\cart;
 
 use Illuminate\Contracts\Support\Arrayable;
-use ZakariaTlilani\cart\Contracts\Buyable;
+use zakariatlilani\cart\Contracts\Buyable;
 use Illuminate\Contracts\Support\Jsonable;
 
 use Illuminate\Support\Arr;
@@ -196,7 +196,7 @@ class CartItem implements Arrayable, Jsonable
     /**
      * Update the cart item from a Buyable.
      *
-     * @param \ZakariaTlilani\cart\Contracts\Buyable $item
+     * @param \zakariatlilani\cart\Contracts\Buyable $item
      * @return void
      */
     public function updateFromBuyable(Buyable $item)
@@ -229,7 +229,7 @@ class CartItem implements Arrayable, Jsonable
      * Associate the cart item with the given model.
      *
      * @param mixed $model
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public function associate($model)
     {
@@ -242,7 +242,7 @@ class CartItem implements Arrayable, Jsonable
      * Set the tax rate.
      *
      * @param int|float $taxRate
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public function setTaxRate($taxRate)
     {
@@ -255,7 +255,7 @@ class CartItem implements Arrayable, Jsonable
      * Set saved state.
      *
      * @param bool $bool
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public function setSaved($bool)
     {
@@ -306,9 +306,9 @@ class CartItem implements Arrayable, Jsonable
     /**
      * Create a new instance from a Buyable.
      *
-     * @param \ZakariaTlilani\cart\Contracts\Buyable $item
+     * @param \zakariatlilani\cart\Contracts\Buyable $item
      * @param array                                      $options
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public static function fromBuyable(Buyable $item, array $options = [])
     {
@@ -319,7 +319,7 @@ class CartItem implements Arrayable, Jsonable
      * Create a new instance from the given array.
      *
      * @param array $attributes
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public static function fromArray(array $attributes)
     {
@@ -335,7 +335,7 @@ class CartItem implements Arrayable, Jsonable
      * @param string     $name
      * @param float      $price
      * @param array      $options
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public static function fromAttributes($id, $name, $price, array $options = [])
     {

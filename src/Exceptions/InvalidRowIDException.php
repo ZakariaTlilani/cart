@@ -1,6 +1,6 @@
 <?php
 
-namespace ZakariaTlilani\cart\Exceptions;
+namespace zakariatlilani\cart\Exceptions;
 
 use RuntimeException;
 

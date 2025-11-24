@@ -1,16 +1,16 @@
 <?php
 
-namespace ZakariaTlilani\cart;
+namespace zakariatlilani\cart;
 
 use Closure;
 use Illuminate\Support\Collection;
 use Illuminate\Session\SessionManager;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Contracts\Events\Dispatcher;
-use ZakariaTlilani\cart\Contracts\Buyable;
-use ZakariaTlilani\cart\Exceptions\UnknownModelException;
-use ZakariaTlilani\cart\Exceptions\InvalidRowIDException;
-use ZakariaTlilani\cart\Exceptions\CartAlreadyStoredException;
+use zakariatlilani\cart\Contracts\Buyable;
+use zakariatlilani\cart\Exceptions\UnknownModelException;
+use zakariatlilani\cart\Exceptions\InvalidRowIDException;
+use zakariatlilani\cart\Exceptions\CartAlreadyStoredException;
 
 class Cart
 {
@@ -55,7 +55,7 @@ class Cart
      * Set the current cart instance.
      *
      * @param string|null $instance
-     * @return \ZakariaTlilani\cart\Cart
+     * @return \zakariatlilani\cart\Cart
      */
     public function instance($instance = null)
     {
@@ -85,7 +85,7 @@ class Cart
      * @param float     $price
      * @param array     $options
      * @param float     $taxrate
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public function add($id, $name = null, $qty = null, $price = null, array $options = [], $taxrate = null)
     {
@@ -121,7 +121,7 @@ class Cart
      *
      * @param string $rowId
      * @param mixed  $qty
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public function update($rowId, $qty)
     {
@@ -183,7 +183,7 @@ class Cart
      * Get a cart item from the cart by its rowId.
      *
      * @param string $rowId
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     public function get($rowId)
     {
@@ -471,7 +471,7 @@ class Cart
      * @param float     $price
      * @param array     $options
      * @param float     $taxrate
-     * @return \ZakariaTlilani\cart\CartItem
+     * @return \zakariatlilani\cart\CartItem
      */
     private function createCartItem($id, $name, $qty, $price, array $options, $taxrate)
     {
