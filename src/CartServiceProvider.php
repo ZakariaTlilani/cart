@@ -10,6 +10,22 @@ class CartServiceProvider extends ServiceProvider
 {
 
     /**
+
+     * Bootstrap any package services.
+
+     */
+
+    public function boot(): void
+
+    {
+
+        $this->publishesMigrations([
+
+            __DIR__ . '/../database/migrations' => database_path('migrations'),
+
+        ]);
+    }
+    /**
      * Register the service provider.
      *
      * @return void

@@ -348,14 +348,15 @@ class Cart
     /**
      * Store an the current instance of the cart.
      *
+     * @param bool $guest
      * @param mixed $identifier
      * @return void
      */
-    public function store($identifier)
+    public function store(bool $guest, $identifier)
     {
         $content = $this->getContent();
 
-
+        $user = ($guest) ? null : $identifier;
         $this->getConnection()
             ->table($this->getTableName())
             ->where('identifier', $identifier)
@@ -364,6 +365,7 @@ class Cart
 
 
         $this->getConnection()->table($this->getTableName())->insert([
+            'user_id' => $user,
             'identifier' => $identifier,
             'instance' => $this->currentInstance(),
             'content' => serialize($content),
@@ -372,6 +374,7 @@ class Cart
 
         $this->events->dispatch('cart.stored');
     }
+
 
     /**
      * Restore the cart with the given identifier.
