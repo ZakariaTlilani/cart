@@ -352,7 +352,7 @@ class Cart
      * @param mixed $identifier
      * @return void
      */
-    public function store(bool $guest, $identifier)
+    public function store($identifier, bool $guest = false)
     {
         $content = $this->getContent();
 
