@@ -4,20 +4,26 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatecartTable extends Migration
+
+return new class extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up()
     {
-        Schema::create(config('cart.database.table'), function (Blueprint $table) {
+        Schema::create('cart', function (Blueprint $table) {
+
+            $table->bigInteger('user_id')->unsigned()->nullable();
+
             $table->string('identifier');
             $table->string('instance');
             $table->longText('content');
             $table->nullableTimestamps();
 
             $table->primary(['identifier', 'instance']);
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onDelete('CASCADE')->onUpdate('CASCADE');
         });
     }
     /**
@@ -25,6 +31,6 @@ class CreatecartTable extends Migration
      */
     public function down()
     {
-        Schema::drop(config('cart.database.table'));
+        Schema::drop('cart');
     }
-}
+};
